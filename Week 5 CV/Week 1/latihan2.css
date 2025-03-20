@@ -1,0 +1,72 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Kontainer utama */
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    border: 2px solid blue;
+    margin-top: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* Konten utama */
+.content {
+    width: 50%;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content img {
+    width: 50%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Leaflet Web Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" ></script>
+    <style>
+        #map {
+            width: 1500px;
+            height: 710px;
+        } 
+    </style>
+</head>
+<body>
+    <div id="map"></div> 
+    <script>
+        var map = L.map('map',{
+        center: [-7.813713, 110.923911],
+        zoom: 15
+        });
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+        var marker = L.marker([-7.8145007009421725, 110.92587129651997]).bindPopup('Alun - Alun Giri Krida Bakti<br>Bastian').addTo(map);
+        var marker = L.marker([-7.816407026519936, 110.9229978260149]).bindPopup('Pasar Kota Wonogiri').addTo(map)
+        var marker = L.marker([-7.835338597940105, 110.9337471282269]).bindPopup('Monumen Bedol Desa').addTo(map)
+        var marker = L.marker([-7.85495673884878, 110.9105208678887]).bindPopup('Wisata Waduk Gadjah Mungkur').addTo(map)
+        var marker = L.marker([-7.804953157488641, 110.9157483493573]).bindPopup('Rumah Sakit Umum Daerah (RSUD)').addTo(map)
+
+
+    </script>
+</body>
+</html> 
