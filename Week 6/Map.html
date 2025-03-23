@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Leaflet Web Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" ></script>
+    <style>
+        #map {
+            width: 100%;
+            min-height: 97vh;
+            box-sizing: border-box;
+            padding: 20px;
+        } 
+    </style>
+</head>
+<body>
+    <div id="map"></div> 
+    <script>
+        var map = L.map('map',{
+        center: [-7.813713, 110.923911],
+        zoom: 15
+        });
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+        var marker = L.marker([-7.8145007009421725, 110.92587129651997]).bindPopup('<b>Alun - Alun Giri Krida Bakti<br><img src="alun alun.jpg"width="164px"height="142px"></img><br>Bastian ★★★★★ (5/5)').addTo(map);
+        var marker = L.marker([-7.816407026519936, 110.9229978260149]).bindPopup('<b>Pasar Kota Wonogiri<br><img src="pasar.jpg"width="164px"height="142px"></img><br>Bastian ★★★★☆ (4/5)').addTo(map)
+        var marker = L.marker([-7.835338597940105, 110.9337471282269]).bindPopup('<b>Monumen Bedol Desa<br><img src="mbd.jpg"width="164px"height="142px"></img><br>Bastian ★★★★☆ (4/5)').addTo(map)
+        var marker = L.marker([-7.85495673884878, 110.9105208678887]).bindPopup('<b>Wisata Waduk Gadjah Mungkur<br><img src="wgm.jpg"width="164px"height="142px"></img><br>Bastian ★★★★★ (5/5)').addTo(map)
+        var marker = L.marker([-7.804953157488641, 110.9157483493573]).bindPopup('<b>Rumah Sakit Umum Daerah (RSUD)<br><img src="rsud.jpg"width="164px"height="142px"></img><br>Bastian ★★★★★ (5/5)').addTo(map)
+        var marker = L.marker([-7.813110007138226, 110.93527036599104]).bindPopup('<b>SPBU Pokoh<br><img src="spbu.jpg"width="164px"height="142px"></img><br>Bastian ★★★★☆ (4/5)').addTo(map)
+        var marker = L.marker([-7.791937003292561, 110.89847787198958]).bindPopup('<b>Terminal Induk Giri Adipura<br><img src="terminal.jpg"width="164px"height="142px"></img><br>Bastian ★★★★☆ (4/5)').addTo(map)
+        
+    </script>
+</body>
+</html> 
