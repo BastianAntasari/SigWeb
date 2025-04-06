@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Web Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
+    integrity="sha512xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    
+    <style>
+        #map {
+            width: 100%;
+            min-height: 97vh;
+            box-sizing: border-box;
+            padding: 20px;
+        } 
+    </style>
+
+</head>
+
+<body>
+    <div id="map"></div> 
+    <script>
+        var map = L.map('map', {center: [-7.79558, 110.36949], zoom: 12});
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', 
+        {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>contributors'})
+        .addTo(map);
+
+        var marker = L.marker([-7.7639847, 110.3704093]).bindPopup('Teknik Geodesi UGM').addTo(map);
+    </script>
+</body>
+
+</html>
